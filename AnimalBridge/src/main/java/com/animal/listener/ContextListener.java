@@ -10,11 +10,13 @@ import com.animal.controller.SubController;
 import com.animal.controller.happyBoard.HappyBoardController;
 import com.animal.controller.happyBoard.HappyBoardViewController;
 import com.animal.controller.happyBoard.HappyBoardWriterController;
+import com.animal.controller.map.MapSaveController;
 import com.animal.controller.map.MapShowController;
 import com.animal.controller.member.MemberJoinController;
 import com.animal.controller.member.MemberLeaveController;
 import com.animal.controller.member.MemberLogInController;
 import com.animal.controller.member.MemberLogOutController;
+
 
 public class ContextListener implements ServletContextListener {
 	@Override
@@ -28,7 +30,8 @@ public class ContextListener implements ServletContextListener {
 		controllers.put("/view/memberView/memberLeave.do", new MemberLeaveController());
 		
 	// Map table
-		controllers.put("/view/MapView/MapTest.do", new MapShowController());
+		controllers.put("/view/mapView/Map.do", new MapShowController());
+		controllers.put("/view/mapView/SaveMap.do", new MapSaveController());
 		
 	// HappyBoard table
 		controllers.put("/view/happyBoardView/happyBoard.do", new HappyBoardController());
